@@ -15,6 +15,16 @@ const alert = (message, type) => {
 const alertTrigger = document.getElementById('liveAlertBtn')
 if (alertTrigger) {
   alertTrigger.addEventListener('click', () => {
-    alert('Nice, you triggered this alert message!', 'success')
+    alert('<div> <h4 class="alert-heading"> Well done!</h4> Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content. <hr> Whenever you need to, be sure to use margin utilities to keep things nice and tidy. </div>', 'success')
+  })
+}
+// toast
+const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+  toastTrigger.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExample)
+
+    toast.show()
   })
 }
